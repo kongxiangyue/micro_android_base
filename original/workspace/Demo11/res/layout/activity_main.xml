@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvUserName"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etUserName"
+        android:layout_alignBottom="@+id/etUserName"
+        android:layout_alignParentLeft="true"
+        android:text="用户名：" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etUserName"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etUserName"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etPassword"
+        android:layout_alignBottom="@+id/etPassword"
+        android:layout_alignParentLeft="true"
+        android:text="密    码：" />
+
+    <Button
+        android:id="@+id/btlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPassword"
+        android:layout_below="@+id/etPassword"
+        android:layout_marginLeft="33dp"
+        android:onClick="doClick"
+        android:text="登陆" />
+
+    <Button
+        android:id="@+id/btcancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btlogin"
+        android:layout_alignBottom="@+id/btlogin"
+        android:layout_toRightOf="@+id/btlogin"
+        android:onClick="doClick"
+        android:text="取消" />
+
+</RelativeLayout>
