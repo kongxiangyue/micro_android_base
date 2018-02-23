@@ -1,1 +1,3 @@
-include ':app'
+include ':intentDemo'
+include ':intentDemo2'
+include ':startActivityForResult'
