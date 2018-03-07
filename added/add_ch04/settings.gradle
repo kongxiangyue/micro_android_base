@@ -1,1 +1,1 @@
-include ':ex02EditText', ':ex01TextView'
+include ':ex02EditText', ':ex01TextView', ':ex03Button'
