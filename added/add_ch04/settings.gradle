@@ -1,1 +1,1 @@
-include ':ex02EditText', ':ex01TextView', ':ex03Button'
+include ':ex02EditText'	, ':ex01TextView'	, ':ex03Button'	, ':ex04LinearLayout'	, ':ex05FrameLayout', ':ex06TableLayout'	, 'ex07RelativeLayout'
