@@ -1,1 +1,1 @@
-include ':ex13longclick'
+include ':ex13longclick',':ex14TextViewTest'
