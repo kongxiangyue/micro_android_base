@@ -1,1 +1,1 @@
-include ':ex02EditText'	, ':ex01TextView'	, ':ex03Button'	, ':ex04LinearLayout'	, ':ex05FrameLayout', ':ex06TableLayout'	, ':ex07RelativeLayout', ':ex08ImageView', ':ex09ImageButton', ':ex10CheckBoxTR',':ex11ProgressBar'
+include ':ex02EditText'	, ':ex01TextView'	, ':ex03Button'	, ':ex04LinearLayout'	, ':ex05FrameLayout', ':ex06TableLayout'	, ':ex07RelativeLayout', ':ex08ImageView', ':ex09ImageButton', ':ex10CheckBoxTR',':ex11ProgressBar',':ex12setEdit'
