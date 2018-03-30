@@ -10,59 +10,69 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.lenovo.myapplication.MainActivity">
 
-    <EditText
+    <TextView
+        android:text="身高："
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/editText" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/editText"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="62dp" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_alignBaseline="@+id/editText"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentStart="true" />
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="38dp"
+        android:textSize="18sp"
+        android:id="@+id/textView" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="请输入身高"
+        android:textSize="18sp"
         android:ems="10"
+        android:layout_marginStart="11dp"
+        android:id="@+id/editText"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:text="体重："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="请输入体重"
+        android:ems="10"
+        android:textSize="18sp"
+        android:id="@+id/editText2"
+        android:layout_alignBaseline="@+id/textView2"
         android:layout_alignBottom="@+id/textView2"
-        android:layout_alignStart="@+id/editText"
-        android:id="@+id/editText2" />
+        android:layout_alignStart="@+id/editText" />
 
     <Button
-        android:text="Button"
+        android:text="确定"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText2"
         android:layout_toEndOf="@+id/textView2"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="13dp"
         android:id="@+id/button" />
 
     <Button
-        android:text="Button"
+        android:text="取消"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button"
-        android:layout_alignEnd="@+id/editText2"
-        android:layout_marginEnd="15dp"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginStart="21dp"
         android:id="@+id/button2" />
+
+
 </RelativeLayout>
