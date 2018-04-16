@@ -1,1 +1,1 @@
-include ':ex13longclick',':ex14TextViewTest',':ex15LieanearP88',':ex16RelativeP90',':ex17TableP92',':ex18FrameP94',':ex19ImageP95',':ex20CheckbaoxP97',':ex21ProgressbarP97'
+include ':ex13longclick',':ex14TextViewTest',':ex15LieanearP88',':ex16RelativeP90',':ex17TableP92',':ex18FrameP94',':ex19ImageP95',':ex20CheckbaoxP97',':ex21ProgressbarP97',':ex22MainActityClick',':ex23XmlClick'
