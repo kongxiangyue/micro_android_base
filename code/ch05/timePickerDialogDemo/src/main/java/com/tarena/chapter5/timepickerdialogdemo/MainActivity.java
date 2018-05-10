@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 
 	private void setupView() {
 		tpSet = (TimePicker) findViewById(R.id.tpSet);
-		// ³õÊ¼»¯
+		// åˆå§‹åŒ–
 		tpSet.setCurrentHour(11);
 		tpSet.setCurrentMinute(40);
 		tpSet.setIs24HourView(false);

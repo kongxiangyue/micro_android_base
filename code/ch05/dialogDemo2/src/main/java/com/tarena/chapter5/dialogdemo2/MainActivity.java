@@ -16,30 +16,30 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("ÓÃ»§µÇÂ¼");
+		builder.setTitle("ç”¨æˆ·ç™»å½•");
 		builder.setIcon(R.drawable.ic_launcher);
-		/* »ñÈ¡µ½layoutµÄÌî³äÆ÷ */
+		/* è·å–åˆ°layoutçš„å¡«å……å™¨ */
 		LayoutInflater li = this.getLayoutInflater();
 		/*
-		 * Í¨¹ıÌî³äÆ÷»ñÈ¡µ½/res/layout/dialog_sign .xmlÕâ¸ö²¼¾ÖÎÄ¼ş£¬È»ºó½«Æä½çÃæÑùÊ½Ö¸¶¨¸ø¶Ô»°¿ò
+		 * é€šè¿‡å¡«å……å™¨è·å–åˆ°/res/layout/dialog_sign .xmlè¿™ä¸ªå¸ƒå±€æ–‡ä»¶ï¼Œç„¶åå°†å…¶ç•Œé¢æ ·å¼æŒ‡å®šç»™å¯¹è¯æ¡†
 		 */
 		View v = li.inflate(R.layout.dialog_sign, null);
 		builder.setView(v);
 		// Button b = (Button) v.findViewById(R.id.mybt);
 		// b.setOnClickListener(l);
-		builder.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+		builder.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				/*
-				 * ÔÚÕâÀï±àĞ´´¦Àíµã»÷¡°È·¶¨¡± °´Å¥µÄÊÂ¼ş
+				 * åœ¨è¿™é‡Œç¼–å†™å¤„ç†ç‚¹å‡»â€œç¡®å®šâ€ æŒ‰é’®çš„äº‹ä»¶
 				 */
 			}
 		});
-		builder.setNegativeButton("È¡Ïû", new DialogInterface.OnClickListener() {
+		builder.setNegativeButton("å–æ¶ˆ", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				/*
-				 * ÔÚÕâÀï±àĞ´´¦Àíµã»÷¡°È¡Ïû¡± °´Å¥µÄÊÂ¼ş
+				 * åœ¨è¿™é‡Œç¼–å†™å¤„ç†ç‚¹å‡»â€œå–æ¶ˆâ€ æŒ‰é’®çš„äº‹ä»¶
 				 */
 			}
 		});

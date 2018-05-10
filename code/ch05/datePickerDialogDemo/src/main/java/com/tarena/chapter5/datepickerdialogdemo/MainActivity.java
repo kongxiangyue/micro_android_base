@@ -18,9 +18,9 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		// ¼ÓÔØ¿Ø¼ş
+		// åŠ è½½æ§ä»¶
 		dpSet = (DatePicker) findViewById(R.id.dpSet);
-		// ³õÊ¼»¯dpSet
+		// åˆå§‹åŒ–dpSet
 		dpSet.init(2015, 0, 19, new OnDateChangedListener() {
 
 			@Override
@@ -29,8 +29,8 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Toast.makeText(
 						MainActivity.this,
-						"ÄúÉèÖÃµÄÊ±¼äÊÇ : " + year + "Äê" + (monthOfYear + 1) + "ÔÂ"
-								+ dayOfMonth + "ÈÕ", 3000).show();
+						"æ‚¨è®¾ç½®çš„æ—¶é—´æ˜¯ : " + year + "å¹´" + (monthOfYear + 1) + "æœˆ"
+								+ dayOfMonth + "æ—¥", 3000).show();
 			}
 		});
 
@@ -42,8 +42,8 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Toast.makeText(
 						MainActivity.this,
-						"ÄúÉèÖÃµÄÊ±¼äÊÇ : " + year + "Äê" + (monthOfYear + 1) + "ÔÂ"
-								+ dayOfMonth + "ÈÕ", 3000).show();
+						"æ‚¨è®¾ç½®çš„æ—¶é—´æ˜¯ : " + year + "å¹´" + (monthOfYear + 1) + "æœˆ"
+								+ dayOfMonth + "æ—¥", 3000).show();
 			}
 		}, 2015, 0, 19);
 	}
