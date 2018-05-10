@@ -3,6 +3,8 @@ package com.tarena.chapter5.optionsmenudemo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -23,6 +25,16 @@ public class MainActivity extends Activity {
 		menu.add(Menu.NONE, 7, Menu.NONE, "item7");
 		return true;
 	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		Toast.makeText(MainActivity.this
+				, item.getTitle().toString()
+				, Toast.LENGTH_SHORT).show();
+		return super.onOptionsItemSelected(item);
+	}
+
 
 	// public boolean onCreateOptionsMenu(Menu menu) {
 	// // “1”为ID，与getItemId()匹配，下同
