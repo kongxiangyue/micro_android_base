@@ -13,19 +13,19 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Dialog Test"); /* ÉèÖÃ±êÌâ */
-		builder.setMessage("ÕâÀïÊÇÌáÊ¾ĞÅÏ¢"); /* Éè    ÖÃÌáÊ¾ĞÅÏ¢ */
-		builder.setIcon(R.drawable.ic_launcher); /* ¼ÓÔØÍ¼±ê */
-		builder.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+		builder.setTitle("Dialog Test"); /* è®¾ç½®æ ‡é¢˜ */
+		builder.setMessage("è¿™é‡Œæ˜¯æç¤ºä¿¡æ¯"); /* è®¾    ç½®æç¤ºä¿¡æ¯ */
+		builder.setIcon(R.drawable.ic_launcher); /* åŠ è½½å›¾æ ‡ */
+		builder.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// ¡°È·¶¨¡±°´Å¥ÊÂ¼ş
+				// â€œç¡®å®šâ€æŒ‰é’®äº‹ä»¶
 			}
 		});
-		builder.setNegativeButton("È¡Ïû", new DialogInterface.OnClickListener() {
+		builder.setNegativeButton("å–æ¶ˆ", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// ¡°È¡Ïû¡±°´Å¥ÊÂ¼ş
+				// â€œå–æ¶ˆâ€æŒ‰é’®äº‹ä»¶
 			}
 		});
 		builder.create();
