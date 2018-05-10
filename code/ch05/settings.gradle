@@ -1,1 +1,5 @@
-include ':app'
+include ':dialogDemo'
+include ':dialogDemo2'
+include ':timePickerDialogDemo'
+include ':datePickerDialogDemo'
+include ':menuDemo'
