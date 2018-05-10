@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 	}
 
 	// public boolean onCreateOptionsMenu(Menu menu) {
-	// // ¡°1¡±ÎªID£¬ÓëgetItemId()Æ¥Åä£¬ÏÂÍ¬
+	// // â€œ1â€ä¸ºIDï¼Œä¸getItemId()åŒ¹é…ï¼Œä¸‹åŒ
 	// menu.add(Menu.NONE, 1, Menu.NONE, "item1");
 	// menu.add(Menu.NONE, 2, Menu.NONE, "item2");
 	// menu.add(Menu.NONE, 3, Menu.NONE, "item3");
@@ -38,10 +38,10 @@ public class MainActivity extends Activity {
 	// public boolean onOptionsItemSelected(MenuItem item) {
 	// switch (item.getItemId()) {
 	// case 1:
-	// // ÓÃ»§µã»÷ÁËIDÎª¡°1¡±µÄ×ÓÏî£¬ÔÚÕâÀï±àĞ´´¦Àí´úÂë
+	// // ç”¨æˆ·ç‚¹å‡»äº†IDä¸ºâ€œ1â€çš„å­é¡¹ï¼Œåœ¨è¿™é‡Œç¼–å†™å¤„ç†ä»£ç 
 	// ;
 	// break;
-	// case 2: /* Öğ¸ö½øĞĞ´¦Àí */
+	// case 2: /* é€ä¸ªè¿›è¡Œå¤„ç† */
 	// ;
 	// break;
 	// }
@@ -50,23 +50,23 @@ public class MainActivity extends Activity {
 	// @Override
 	// public boolean onCreateOptionsMenu(Menu menu) {
 	// /*
-	// * add()·½·¨µÄËÄ¸ö²ÎÊı£¬ÒÀ´ÎÊÇ£º 1¡¢×é±ğ£¬Èç¹û²»·Ö×éµÄ»°¾ÍĞ´Menu.NONE,
-	// * 2¡¢Id£¬Õâ¸öºÜÖØÒª£¬Android¸ù¾İÕâ¸öIdÀ´È·¶¨²»Í¬µÄ²Ëµ¥ 3¡¢Ë³Ğò£¬ÄÇ¸ö²Ëµ¥ÏÖÔÚÔÚÇ°ÃæÓÉÕâ¸ö²ÎÊıµÄ´óĞ¡¾ö¶¨
-	// * 4¡¢ÎÄ±¾£¬²Ëµ¥µÄÏÔÊ¾ÎÄ±¾
+	// * add()æ–¹æ³•çš„å››ä¸ªå‚æ•°ï¼Œä¾æ¬¡æ˜¯ï¼š 1ã€ç»„åˆ«ï¼Œå¦‚æœä¸åˆ†ç»„çš„è¯å°±å†™Menu.NONE,
+	// * 2ã€Idï¼Œè¿™ä¸ªå¾ˆé‡è¦ï¼ŒAndroidæ ¹æ®è¿™ä¸ªIdæ¥ç¡®å®šä¸åŒçš„èœå• 3ã€é¡ºåºï¼Œé‚£ä¸ªèœå•ç°åœ¨åœ¨å‰é¢ç”±è¿™ä¸ªå‚æ•°çš„å¤§å°å†³å®š
+	// * 4ã€æ–‡æœ¬ï¼Œèœå•çš„æ˜¾ç¤ºæ–‡æœ¬
 	// */
-	// // setIcon()·½·¨Îª²Ëµ¥ÉèÖÃÍ¼±ê£¬ÕâÀïÊ¹ÓÃµÄÊÇÏµÍ³×Ô´øµÄÍ¼±ê£¬Í¬Ñ§ÃÇÁôÒâÒ»ÏÂ,ÒÔ
-	// // android.R¿ªÍ·µÄ×ÊÔ´ÊÇÏµÍ³Ìá¹©µÄ£¬ÎÒÃÇ×Ô¼ºÌá¹©µÄ×ÊÔ´ÊÇÒÔR¿ªÍ·µÄ
-	// menu.add(Menu.NONE, Menu.FIRST + 1, 5, "Ë¢ĞÂÇú¿â").setIcon(
+	// // setIcon()æ–¹æ³•ä¸ºèœå•è®¾ç½®å›¾æ ‡ï¼Œè¿™é‡Œä½¿ç”¨çš„æ˜¯ç³»ç»Ÿè‡ªå¸¦çš„å›¾æ ‡ï¼ŒåŒå­¦ä»¬ç•™æ„ä¸€ä¸‹,ä»¥
+	// // android.Rå¼€å¤´çš„èµ„æºæ˜¯ç³»ç»Ÿæä¾›çš„ï¼Œæˆ‘ä»¬è‡ªå·±æä¾›çš„èµ„æºæ˜¯ä»¥Rå¼€å¤´çš„
+	// menu.add(Menu.NONE, Menu.FIRST + 1, 5, "åˆ·æ–°æ›²åº“").setIcon(
 	// android.R.drawable.ic_menu_search);
-	// menu.add(Menu.NONE, Menu.FIRST + 2, 6, "ÍË³ö").setIcon(
+	// menu.add(Menu.NONE, Menu.FIRST + 2, 6, "é€€å‡º").setIcon(
 	// android.R.drawable.ic_menu_set_as);
-	// menu.add(Menu.NONE, Menu.FIRST + 3, 2, "°ïÖú").setIcon(
+	// menu.add(Menu.NONE, Menu.FIRST + 3, 2, "å¸®åŠ©").setIcon(
 	// android.R.drawable.ic_menu_help);
-	// menu.add(Menu.NONE, Menu.FIRST + 4, 1, "ÁĞ±í").setIcon(
+	// menu.add(Menu.NONE, Menu.FIRST + 4, 1, "åˆ—è¡¨").setIcon(
 	// android.R.drawable.ic_menu_agenda);
-	// menu.add(Menu.NONE, Menu.FIRST + 5, 4, "¹ØÓÚ").setIcon(
+	// menu.add(Menu.NONE, Menu.FIRST + 5, 4, "å…³äº").setIcon(
 	// android.R.drawable.ic_menu_info_details);
-	// menu.add(Menu.NONE, Menu.FIRST + 6, 3, "ÉèÖÃ").setIcon(
+	// menu.add(Menu.NONE, Menu.FIRST + 6, 3, "è®¾ç½®").setIcon(
 	// android.R.drawable.ic_menu_preferences);
 	// return super.onCreateOptionsMenu(menu);
 	// }
@@ -75,26 +75,26 @@ public class MainActivity extends Activity {
 	// public boolean onOptionsItemSelected(MenuItem item) {
 	//
 	// switch (item.getItemId()) {
-	// // ÕâÀïµÄMenu.FIRSTÊÇÒ»¸ö³£Á¿ IdµÄ±êÊ¾
-	// // ¸ù¾İµÃµ½µÄIDÅĞ¶Ï µ±Ç°ÄÇ¸ö²Ëµ¥Ïî±»µãÖĞ
+	// // è¿™é‡Œçš„Menu.FIRSTæ˜¯ä¸€ä¸ªå¸¸é‡ Idçš„æ ‡ç¤º
+	// // æ ¹æ®å¾—åˆ°çš„IDåˆ¤æ–­ å½“å‰é‚£ä¸ªèœå•é¡¹è¢«ç‚¹ä¸­
 	// case Menu.FIRST + 1:
-	// Toast.makeText(this, "Ë¢ĞÂ²Ëµ¥±»µã»÷ÁË", Toast.LENGTH_SHORT).show();
+	// Toast.makeText(this, "åˆ·æ–°èœå•è¢«ç‚¹å‡»äº†", Toast.LENGTH_SHORT).show();
 	// break;
 	// case Menu.FIRST + 2:
-	// MainActivity.this.finish();// ½áÊøµ±Ç°activity
+	// MainActivity.this.finish();// ç»“æŸå½“å‰activity
 	// break;
 	// case Menu.FIRST + 3:
-	// Toast.makeText(this, "°ïÖú²Ëµ¥±»µã»÷ÁË", Toast.LENGTH_SHORT).show();
+	// Toast.makeText(this, "å¸®åŠ©èœå•è¢«ç‚¹å‡»äº†", Toast.LENGTH_SHORT).show();
 	// break;
-	// case Menu.FIRST + 4:// Ìø×ªµ½²¥·ÅÁĞ±í
+	// case Menu.FIRST + 4:// è·³è½¬åˆ°æ’­æ”¾åˆ—è¡¨
 	// Intent setIntent = new Intent(MainActivity.this, MainActivity.class);
 	// MainActivity.this.startActivity(setIntent);
 	// break;
 	// case Menu.FIRST + 5:
-	// Toast.makeText(this, "¹ØÓÚ²Ëµ¥±»µã»÷ÁË", Toast.LENGTH_SHORT).show();
+	// Toast.makeText(this, "å…³äºèœå•è¢«ç‚¹å‡»äº†", Toast.LENGTH_SHORT).show();
 	// break;
 	// case Menu.FIRST + 6:
-	// Toast.makeText(this, "ÉèÖÃ²Ëµ¥±»µã»÷ÁË", Toast.LENGTH_SHORT).show();
+	// Toast.makeText(this, "è®¾ç½®èœå•è¢«ç‚¹å‡»äº†", Toast.LENGTH_SHORT).show();
 	// break;
 	// }
 	// return false;

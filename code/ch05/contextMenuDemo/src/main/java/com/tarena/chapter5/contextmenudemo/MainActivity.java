@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 		SubMenu subMenu = menu.addSubMenu(Menu.NONE, 6, Menu.NONE, "Item6");
 		subMenu.setHeaderIcon(R.drawable.ic_launcher);
 		subMenu.setIcon(R.drawable.ic_launcher);
-		subMenu.setHeaderTitle("ÉÏÏÂÎÄÖĞµÄ×Ó²Ëµ¥");
+		subMenu.setHeaderTitle("ä¸Šä¸‹æ–‡ä¸­çš„å­èœå•");
 		subMenu.add(Menu.NONE, 61, Menu.NONE, "Item6-1");
 		subMenu.add(Menu.NONE, 62, Menu.NONE, "Item6-2");
 		subMenu.add(Menu.NONE, 63, Menu.NONE, "Item6-3");
@@ -46,13 +46,13 @@ public class MainActivity extends Activity {
 		switch (item.getItemId()) {
 		case 1:
 			/*
-			 * ´Ë´¦¿ÉÒÔ´¦ÀíMenuIdÎª1µÄ²Ëµ¥Ïî
+			 * æ­¤å¤„å¯ä»¥å¤„ç†MenuIdä¸º1çš„èœå•é¡¹
 			 */
 			break;
 
 		case 61:
 			/*
-			 * ´Ë´¦¿ÉÒÔ´¦ÀíMenuIdÎª61µÄ²Ëµ¥Ïî
+			 * æ­¤å¤„å¯ä»¥å¤„ç†MenuIdä¸º61çš„èœå•é¡¹
 			 */
 			break;
 		}

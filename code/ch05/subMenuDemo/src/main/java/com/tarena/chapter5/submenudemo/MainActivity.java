@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 
 		SubMenu subMenu = menu.addSubMenu(Menu.NONE, 5, Menu.NONE, "item5");
 		subMenu.setHeaderIcon(R.drawable.ic_launcher);
-		subMenu.setHeaderTitle("�Ӳ˵�");
+		subMenu.setHeaderTitle("子菜单");
 		subMenu.setIcon(R.drawable.ic_launcher);
 		subMenu.add(Menu.NONE, 51, Menu.NONE, "item5-1");
 		subMenu.add(Menu.NONE, 52, Menu.NONE, "item5-2");
