@@ -24,28 +24,30 @@ public class MainActivity extends Activity {
 	}
 
 	public void alert(View v) {
-		//AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		//builder.setTitle("Dialog Test"); /* 设置标题 */
-		//builder.setMessage("这里是提示信息"); /* 设    置提示信息 */
-		//builder.setIcon(R.drawable.ic_launcher); /* 加载图标 */
-		//builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-		//	@Override
-		//	public void onClick(DialogInterface dialog, int which) {
-		//		// “确定”按钮事件
-		//	}
-		//});
-		//builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-		//	@Override
-		//	public void onClick(DialogInterface dialog, int which) {
-		//		// “取消”按钮事件
-		//	}
-		//});
-		//builder.create();
-		//builder.show();
+		// 实例化AlertDialog.Builder对象
+		// 设置各种信息（标题、图标、两个按键监听等）
+		// create
+		// show
 
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Dialog Test"); /* 设置标题 */
+		builder.setMessage("这里是提示信息"); /* 设    置提示信息 */
+		builder.setIcon(R.drawable.ic_launcher); /* 加载图标 */
+		builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// “确定”按钮事件
+			}
+		});
+		builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// “取消”按钮事件
+			}
+		});
 
-
-
+		builder.create();
+		builder.show();
 
 	}
 

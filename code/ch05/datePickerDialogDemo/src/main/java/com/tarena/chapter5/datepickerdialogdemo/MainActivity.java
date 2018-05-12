@@ -9,6 +9,15 @@ import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.Toast;
 
+
+
+// 如何实例化一个datapicker对话框 5个参数
+// MainActivity.this
+// 监听器(已经提供所选择的年月日)
+// 初始化的年月日
+
+// 如何弹出 (实例化成功后)直接调用show(不要调用create)
+
 public class MainActivity extends Activity {
 	private DatePicker dpSet;
 	private DatePickerDialog dialog;
@@ -34,21 +43,26 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		dialog = new DatePickerDialog(this, new OnDateSetListener() {
+		OnDateSetListener onDateSetListener = new OnDateSetListener() {
 
 			@Override
 			public void onDateSet(DatePicker view, int year, int monthOfYear,
-					int dayOfMonth) {
+								  int dayOfMonth) {
 				// TODO Auto-generated method stub
 				Toast.makeText(
 						MainActivity.this,
 						"您设置的时间是 : " + year + "年" + (monthOfYear + 1) + "月"
-								+ dayOfMonth + "日", 3000).show();
+								+ dayOfMonth + "日", Toast.LENGTH_SHORT).show();
 			}
-		}, 2015, 0, 19);
+		};
+
+		dialog = new DatePickerDialog(this
+				,onDateSetListener , 2015, 0, 19);
 	}
 
 	public void doClick(View v) {
+
+		//弹出,跟前面提示对框是一样,都是调show()方法
 		dialog.show();
 	}
 }
