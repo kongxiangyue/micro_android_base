@@ -1,1 +1,1 @@
-include ':ex01newActivity', ':ex02allJump'
+include ':ex01newActivity', ':ex02allJump', ':ex03ActivityLogin'
