@@ -6,30 +6,51 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+	NotificationManager manager;
+	Notification noti;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-		//´´½¨Ò»¸öÍ¨ÖªµÄ¶ÔÏó
-		Notification noti = new Notification();
-		Intent myIntent = new Intent(MainActivity.this,OtherActivity.class);
-		PendingIntent myPendingIntent = PendingIntent.getActivity(MainActivity.this, 0, myIntent, 0);
-		noti.setLatestEventInfo(MainActivity.this, "ÈÎÎñÀ¸ÏÔÊ¾µÄ±êÌâ", "ÈÎÎñÀ¸ÏÔÊ¾µÄÄÚÈİ", myPendingIntent);
+		manager
+				= (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+		//åˆ›å»ºä¸€ä¸ªé€šçŸ¥çš„å¯¹è±¡
+		noti = new Notification();
+		Intent myIntent = new Intent(MainActivity.this, OtherActivity.class);
+		myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+		PendingIntent myPendingIntent
+				= PendingIntent.getActivity(MainActivity.this, 0, myIntent, 0);
+
+		noti.setLatestEventInfo(MainActivity.this
+				, "ä»»åŠ¡æ æ˜¾ç¤ºçš„æ ‡é¢˜"
+				, "ä»»åŠ¡æ æ˜¾ç¤ºçš„å†…å®¹"
+				, myPendingIntent);
 		noti.icon = R.drawable.ic_launcher;
-		noti.tickerText = "Í¨ÖªµÄ¹ö¶¯ÏÔÊ¾ÄÚÈİ¡£";
+		noti.tickerText = "é€šçŸ¥çš„æ»šåŠ¨æ˜¾ç¤ºå†…å®¹ã€‚";
 		noti.defaults = Notification.DEFAULT_SOUND;
 		
-		//ÉèÖÃÉùÒô »òÕßÏìÁåµÄÄ£Ê½
+		//è®¾ç½®å£°éŸ³ æˆ–è€…å“é“ƒçš„æ¨¡å¼
 		noti.audioStreamType = android.media.AudioManager.ADJUST_LOWER;
-		//Í¨ÖªµÄ·¢ËÍÊ±¼ä
+		//é€šçŸ¥çš„å‘é€æ—¶é—´
 		noti.flags = Notification.FLAG_NO_CLEAR;
 		noti.when = System.currentTimeMillis();
 		
-		manager.notify(R.drawable.ic_launcher, noti);
+
+		Button button = (Button) findViewById(R.id.button);
+		button.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				manager.notify(R.drawable.ic_launcher, noti);
+			}
+		});
+
+
 //		manager.cancel(id);
 	}
 

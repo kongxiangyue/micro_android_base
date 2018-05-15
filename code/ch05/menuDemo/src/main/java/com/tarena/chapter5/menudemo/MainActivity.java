@@ -17,8 +17,10 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		/*
-		 * add()方法的四个参数，依次是： 1、组别，如果不分组的话就写Menu.NONE,
-		 * 2、Id，这个很重要，Android根据这个Id来确定不同的菜单 3、顺序，那个菜单现在在前面由这个参数的大小决定
+		 * add()方法的四个参数，依次是：
+		 * 1、组别，如果不分组的话就写Menu.NONE,
+		 * 2、Id，这个很重要，Android根据这个Id来确定不同的菜单
+		 * 3、顺序，那个菜单现在在前面由这个参数的大小决定
 		 * 4、文本，菜单的显示文本
 		 */
 		// setIcon()方法为菜单设置图标，这里使用的是系统自带的图标，以

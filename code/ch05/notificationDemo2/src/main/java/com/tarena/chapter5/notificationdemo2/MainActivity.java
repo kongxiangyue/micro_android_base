@@ -14,7 +14,7 @@ import android.widget.RemoteViews;
 public class MainActivity extends Activity {
 
 	Button start;
-	NotificationManager manager;// Í¨Öª¹ÜÀíÕß
+	NotificationManager manager;// é€šçŸ¥ç®¡ç†è€…
 	Notification notis;
 
 	/** Called when the activity is first created. */
@@ -35,19 +35,19 @@ public class MainActivity extends Activity {
 						MainActivity.this, 0, intents, 0);
 				notis.defaults = Notification.DEFAULT_SOUND;
 				notis.flags = Notification.FLAG_NO_CLEAR;
-				notis.tickerText = "ÏÂÔØÌáÊ¾";
+				notis.tickerText = "ä¸‹è½½æç¤º";
 				notis.contentIntent = pdintents;
 				notis.icon = R.drawable.ic_launcher;
 				notis.when = System.currentTimeMillis();
 				notis.contentView = new RemoteViews(getPackageName(),
 						R.layout.noti);
-				notis.contentView.setTextViewText(R.id.tvMusicName, "ìşìı");
+				notis.contentView.setTextViewText(R.id.tvMusicName, "å¿å¿‘");
 				notis.contentView.setTextViewText(R.id.tvProgress, "0kb");
 				notis.contentView.setTextViewText(R.id.tvTotalLength, "100kB");
 				notis.contentView
 						.setProgressBar(R.id.pbDownload, 100, 0, false);
 				manager.notify(123, notis);
-				// Ïß³Ì - - - -- Ä£Äâ¿ªÊ¼ÏÂÔØ
+				// çº¿ç¨‹ - - - -- æ¨¡æ‹Ÿå¼€å§‹ä¸‹è½½
 				new Thread() {
 					public void run() {
 						for (int i = 0; i <= 100; i += 10) {

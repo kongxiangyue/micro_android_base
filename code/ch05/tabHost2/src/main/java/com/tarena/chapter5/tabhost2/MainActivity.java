@@ -17,38 +17,38 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		TabHost th = (TabHost) findViewById(R.id.tabHost);
-		th.setup(); // ³õÊ¼»¯TabHost
+		th.setup(); // åˆå§‹åŒ–TabHost
 
 		TabSpec spec1 = th.newTabSpec("Tag1");
-		spec1.setIndicator(createTabIndicator(th, "Í¨»°¼ÇÂ¼", R.drawable.imgselect));
+		spec1.setIndicator(createTabIndicator(th, "é€šè¯è®°å½•", R.drawable.imgselect));
 		spec1.setContent(R.id.tab1content);
 		th.addTab(spec1);
 
 		TabSpec spec2 = th.newTabSpec("Tag2");
-		spec2.setIndicator(createTabIndicator(th, "ÁªÏµÈË", R.drawable.imgselect));
+		spec2.setIndicator(createTabIndicator(th, "è”ç³»äºº", R.drawable.imgselect));
 		spec2.setContent(R.id.tab2content);
 		th.addTab(spec2);
 
 		TabSpec spec3 = th.newTabSpec("Tag3");
-		spec3.setIndicator(createTabIndicator(th, "¶ÌĞÅ", R.drawable.imgselect));
+		spec3.setIndicator(createTabIndicator(th, "çŸ­ä¿¡", R.drawable.imgselect));
 		spec3.setContent(R.id.tab3content);
 		th.addTab(spec3);
 
-		th.setCurrentTab(1); // ÉèÖÃÄ¬ÈÏÏÔÊ¾µÚ2¸öµ¼º½½çÃæ
+		th.setCurrentTab(1); // è®¾ç½®é»˜è®¤æ˜¾ç¤ºç¬¬2ä¸ªå¯¼èˆªç•Œé¢
 	}
 
 	/**
-	 * ´´½¨²¢·µ»ØÒ»¸öView¶ÔÏó£¬¸Ã¶ÔÏóÖ¸¶¨µ¼º½±êÇ©ÈçºÎ»æÖÆ£¬ ÕâÀïÊ¹ÓÃÒ»¸ö²¼¾ÖÎÄ¼ştab_indicator .xmlÀ´×Ô¶¨Òåµ¼º½±êÇ©µÄÑùÊ½£¬
-	 * ¿ÉÒÔ·ÅÖÃÈÎºÎµÄ¿Ø¼ş½øÈ¥ £¬ÕâÀï·ÅÖÃÁËÒ»¸öÍ¼±êºÍÒ»¶ÎÎÄ×Ö ¡£ÕæÊµµÄÏîÄ¿ÖĞ£¬»¹ĞèÒªÊ¹ÓÃselector
-	 * £¨±³¾°Ñ¡ÔñÆ÷£©À´Íê³Éµ¼º½±êÇ©Ñ¡ÖĞÓëÎ´±»Ñ¡ÖĞµÄ±³¾°¸Ä±ä£¬ ±¾°¸ÀıÎ´ÊµÏÖÕâÒ»¹¦ÄÜ¡£
+	 * åˆ›å»ºå¹¶è¿”å›ä¸€ä¸ªViewå¯¹è±¡ï¼Œè¯¥å¯¹è±¡æŒ‡å®šå¯¼èˆªæ ‡ç­¾å¦‚ä½•ç»˜åˆ¶ï¼Œ è¿™é‡Œä½¿ç”¨ä¸€ä¸ªå¸ƒå±€æ–‡ä»¶tab_indicator .xmlæ¥è‡ªå®šä¹‰å¯¼èˆªæ ‡ç­¾çš„æ ·å¼ï¼Œ
+	 * å¯ä»¥æ”¾ç½®ä»»ä½•çš„æ§ä»¶è¿›å» ï¼Œè¿™é‡Œæ”¾ç½®äº†ä¸€ä¸ªå›¾æ ‡å’Œä¸€æ®µæ–‡å­— ã€‚çœŸå®çš„é¡¹ç›®ä¸­ï¼Œè¿˜éœ€è¦ä½¿ç”¨selector
+	 * ï¼ˆèƒŒæ™¯é€‰æ‹©å™¨ï¼‰æ¥å®Œæˆå¯¼èˆªæ ‡ç­¾é€‰ä¸­ä¸æœªè¢«é€‰ä¸­çš„èƒŒæ™¯æ”¹å˜ï¼Œ æœ¬æ¡ˆä¾‹æœªå®ç°è¿™ä¸€åŠŸèƒ½ã€‚
 	 * 
 	 * @param th
-	 *            TabHost¶ÔÏó
+	 *            TabHostå¯¹è±¡
 	 * @param tabTitle
-	 *            µ¼º½±êÇ©µÄÎÄ×Ö±êÌâ
+	 *            å¯¼èˆªæ ‡ç­¾çš„æ–‡å­—æ ‡é¢˜
 	 * @param tabIconId
-	 *            µ¼º½±êÇ©µÄÍ¼±êµÄID
-	 * @return µ¼º½±êÇ©µÄView
+	 *            å¯¼èˆªæ ‡ç­¾çš„å›¾æ ‡çš„ID
+	 * @return å¯¼èˆªæ ‡ç­¾çš„View
 	 */
 	private View createTabIndicator(TabHost th, String tabTitle, int tabIconId) {
 		View tabIndicator = LayoutInflater.from(this).inflate(

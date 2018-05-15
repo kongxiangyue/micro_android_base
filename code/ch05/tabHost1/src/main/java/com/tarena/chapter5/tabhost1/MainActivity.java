@@ -10,22 +10,22 @@ public class MainActivity extends TabActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// ÉèÖÃtabhostµÄ²¼¾Ö
-		// ´ÓtabactivityÉÏÃæ»ñÈ¡·ÅÖÃtabµÄtabhost
+		// è®¾ç½®tabhostçš„å¸ƒå±€
+		// ä»tabactivityä¸Šé¢è·å–æ”¾ç½®tabçš„tabhost
 		TabHost tabHost = getTabHost();
-		// from(this)´ÓÕâ¸ötabactivity»ñÈ¡LayoutInflater
-		LayoutInflater.from(this).inflate(R.layout.activity_main,// ´æ·Åtab²¼¾ÖµÄlayout
-				tabHost.getTabContentView(),// Í¨¹ıtabhost»ñµÃ´æ·ÅtabÒ³Ç©ÄÚÈİµÄ×Ó²¼¾Ö
-				true);// ÊÇ·ñ½«LayoutInflater°ó¶¨µ½¸ù²¼¾ÖÉÏ
+		// from(this)ä»è¿™ä¸ªtabactivityè·å–LayoutInflater
+		LayoutInflater.from(this).inflate(R.layout.activity_main,// å­˜æ”¾tabå¸ƒå±€çš„layout
+				tabHost.getTabContentView(),// é€šè¿‡tabhostè·å¾—å­˜æ”¾tabé¡µç­¾å†…å®¹çš„å­å¸ƒå±€
+				true);// æ˜¯å¦å°†LayoutInflaterç»‘å®šåˆ°æ ¹å¸ƒå±€ä¸Š
 		// 1
-		tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("ÒÑ½Óµç»°")
+		tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("å·²æ¥ç”µè¯")
 				.setContent(R.id.tab01));
 		tabHost.addTab(tabHost
 				.newTabSpec("tab2")
-				.setIndicator("ºô³öµç»°",
+				.setIndicator("å‘¼å‡ºç”µè¯",
 						getResources().getDrawable(R.drawable.ic_launcher))
 				.setContent(R.id.tab02));
-		tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Î´½Óµç»°")
+		tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("æœªæ¥ç”µè¯")
 				.setContent(R.id.tab03));
 	}
 }
