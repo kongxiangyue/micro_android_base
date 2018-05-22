@@ -8,6 +8,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+// ArrayAdapter使用
+
+// *步骤-在xml上添加一个listview
+// *步骤-在loyout目录上新建一个[以TextView为根节点的xml]
+// *步骤-完善[String 数组]
+// *步骤-实例化 ArrayAdapter用[String 数组][以TextView为根节点的xml]
+// *步骤-绑定UI
+// *步骤-setAdapter
+// *步骤-setOnItemClickListener
+
 public class MainActivity extends AppCompatActivity {
     // Array of strings...
     String[] mobileArray = {"Android"
