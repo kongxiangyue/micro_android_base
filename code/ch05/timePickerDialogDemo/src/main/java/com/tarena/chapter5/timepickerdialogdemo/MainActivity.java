@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 			public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
 				// TODO Auto-generated method stub
 				Toast.makeText(MainActivity.this, hourOfDay + ":" + minute,
-						3000).show();
+						Toast.LENGTH_SHORT).show();
 			}
 		});
 	}
