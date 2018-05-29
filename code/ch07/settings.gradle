@@ -1,1 +1,4 @@
-include ':app'
+include ':sharedPreferences'
+include ':sQLiteDemo'
+include ':sQLite_SQLiteOpenHelper'
+include ':sQLite_openOrCreateDatabase'
