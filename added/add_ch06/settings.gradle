@@ -1,1 +1,1 @@
-include ':ex01listDisplay', ':ex02baseadapter'
+include ':ex01listDisplay', ':ex02baseadapter', ':ex03viewimg'
