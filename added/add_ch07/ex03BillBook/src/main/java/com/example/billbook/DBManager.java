@@ -36,7 +36,6 @@ public class DBManager {//自定义的类,用于封装数据操作
         }finally {
             db.endTransaction();    //结束事务
         }
-        db.update()
     }
 
     public Double getResult(int type)//type要么是1要么是2 out 或in
