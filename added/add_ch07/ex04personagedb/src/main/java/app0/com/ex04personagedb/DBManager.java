@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
+
 /**
  * Created by htx on 2016/2/20.
  */
@@ -51,6 +53,24 @@ public class DBManager {//自定义的类,用于封装数据操作
         return allPerson;
     }
 
+
+    public Person[] getAllPerson2()
+    {
+        ArrayList<Person> allPerson = new ArrayList<>();
+
+        Cursor c = db.rawQuery("select * from "+ DBHelper.TABLE_NAME,null);
+        int i = 0;
+        for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
+            Person tmp = new Person();
+            tmp.setName(c.getString(1)).setAge(c.getInt(2));
+            allPerson.add(tmp);
+            i++;
+        }
+        c.close();
+
+        Person[] ret = (Person[])allPerson.toArray(new Person[allPerson.size()]);
+        return ret;
+    }
 
 
     public void closeDB(){
