@@ -35,18 +35,23 @@ public class DBManager {//自定义的类,用于封装数据操作
         }
     }
 
-    //public Double getResult(int type)//type要么是1要么是2 out 或in
-    //{
-    //    //查询操作,将所有收/支信息查出来,通过type来区别收/支
-    //    Double result = 0.0;
-    //    Cursor c = db.rawQuery("select id,count,type,date,describe from "+ TABLE_NAME,null);
-    //    for (c.moveToFirst();!c.isAfterLast();c.moveToNext()) {
-    //        if (c.getInt(2) == type)//1为支出,2为收入,在MainActivity里定义了
-    //            result += Double.parseDouble(c.getString(1));
-    //    }//用于算出总收入/总支出
-    //    c.close();
-    //    return result;
-    //}
+    public Person[] getAllPerson()
+    {
+        Person[] allPerson = new Person[10];// 这是个非常规的做法
+
+        Cursor c = db.rawQuery("select * from "+ DBHelper.TABLE_NAME,null);
+        int i = 0;
+        for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
+            Person tmp = new Person();
+            tmp.setName(c.getString(1)).setAge(c.getInt(2));
+            allPerson[0] = tmp;
+            i++;
+        }
+        c.close();
+        return allPerson;
+    }
+
+
 
     public void closeDB(){
         db.close();

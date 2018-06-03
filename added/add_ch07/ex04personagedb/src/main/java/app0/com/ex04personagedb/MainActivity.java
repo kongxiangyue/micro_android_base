@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     EditText edName,edAge;
     TextView tvInfo;
     Button btnCommit;
+    Button btnGet;
     DBManager dbManager;
 
 
@@ -30,7 +31,14 @@ public class MainActivity extends AppCompatActivity {
                         .setAge(Integer.parseInt(edAge.getText().toString()));
                 dbManager.insert(person);
 
+            }
+        });
 
+        btnGet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Person[] allPerson = dbManager.getAllPerson();
+                tvInfo.setText(allPerson[0].getName() + "-" + allPerson[0].getAge());
             }
         });
 
@@ -41,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         edName     = (EditText)findViewById(R.id.edname);
         edAge      = (EditText)findViewById(R.id.edage);
         btnCommit  = (Button)findViewById(R.id.btncommit);
+        btnGet     = (Button)findViewById(R.id.button);
         tvInfo     = (TextView)findViewById(R.id.tvinfo);
     }
 }
