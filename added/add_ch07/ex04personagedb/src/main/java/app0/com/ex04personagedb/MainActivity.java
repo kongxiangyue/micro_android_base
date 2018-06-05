@@ -7,6 +7,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+//tom 12
+// UI -->  DB相关对象---> 数据库文件
+
+// 界面相关 xml UI绑定 点击响应
+// Person     数据封装  行-->对象
+// DBHelper   用于新建、管理数据库
+// DBManager  用操作数据（插入、查询）
+
 public class MainActivity extends AppCompatActivity {
     EditText edName,edAge;
     TextView tvInfo;
@@ -14,14 +23,12 @@ public class MainActivity extends AppCompatActivity {
     Button btnGet;
     DBManager dbManager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bindUI();
         dbManager = new DBManager(MainActivity.this);
-
 
         btnCommit.setOnClickListener(new View.OnClickListener() {
             @Override
