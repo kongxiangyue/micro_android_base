@@ -30,6 +30,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(sql);
     }
 
+    // 当打开数据库时传入的版本号与当前版本号不同会调用该方法
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists" + TABLE_NAME);
