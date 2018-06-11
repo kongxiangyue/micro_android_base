@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edage"
+        android:theme="@style/MyEditText"
         android:hint="年龄"/>
 
     <Button
