@@ -16,7 +16,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainPanelActivity" />
-        <activity android:name=".SysSettingActivity"></activity>
+        <activity android:name=".SysSettingActivity" />
+        <activity android:name=".AddIncomeActivity" />
+        <activity android:name=".AddExpenseActivity" />
+        <activity android:name=".IncomeInfoActivity" />
+        <activity android:name=".ExpenseInfoActivity" />
+        <activity android:name=".NoteActivity" />
+        <activity android:name=".ShowInfoActivity"></activity>
     </application>
 
 </manifest>
