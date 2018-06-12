@@ -21,27 +21,27 @@ public class MainPanelActivity extends AppCompatActivity {
     void clickBtn(View v) {
         switch (v.getId()) {
             case R.id.btn_add_income   : {
-
+                jumpAcitivty(AddIncomeActivity.class);
             }
             break;
             case R.id.btn_add_expense  : {
-
+                jumpAcitivty(AddExpenseActivity.class);
             }
             break;
             case R.id.btn_income_info  : {
-
+                jumpAcitivty(IncomeInfoActivity.class);
             }
             break;
             case R.id.btn_expense_info : {
-
+                jumpAcitivty(ExpenseInfoActivity.class);
             }
             break;
             case R.id.btn_note         : {
-
+                jumpAcitivty(NoteActivity.class);
             }
             break;
             case R.id.btn_show_info    : {
-
+                jumpAcitivty(ShowInfoActivity.class);
             }
             break;
             case R.id.btn_syssetting   : {
@@ -54,8 +54,6 @@ public class MainPanelActivity extends AppCompatActivity {
             break;
             default: break;
         }
-
-
     }
 
     private void jumpAcitivty(Class activity) {
