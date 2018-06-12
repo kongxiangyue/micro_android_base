@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:layout_weight="1"
+            android:onClick="btnClick"
             android:id="@+id/btnSetPassword" />
 
         <Button
@@ -42,6 +43,7 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:layout_weight="1"
+            android:onClick="btnClick"
             android:id="@+id/btnCancel" />
 
     </LinearLayout>
