@@ -23,40 +23,40 @@ public class MainActivity extends Activity {
 		gv = (GridView) findViewById(R.id.gridView1);
 		musiclist = new ArrayList<Music>();
 		for (int i = 0; i <= 50; i++) {
-			music = new Music(1001, R.drawable.ic_launcher, "everyDay", "ÕÅÈıµÄ¸è"
-					+ i, "ÕÅÈı", "02:34");
+			music = new Music(1001, R.drawable.ic_launcher, "everyDay", "å¼ ä¸‰çš„æ­Œ"
+					+ i, "å¼ ä¸‰", "02:34");
 			musiclist.add(music);
 		}
 		adapter = new MusicAdapter(MainActivity.this, musiclist);
 		gv.setAdapter(adapter);
-		// ´¦ÀíÓÃ»§µ¥»÷ÊÂ¼ş
+		// å¤„ç†ç”¨æˆ·å•å‡»äº‹ä»¶
 		gv.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> listView, View item,
 					int position, long id) {
 				Music itemMusic = musiclist.get(position);
-				// positionµÄÖµÊÇ´Ó0¿ªÊ¼
+				// positionçš„å€¼æ˜¯ä»0å¼€å§‹
 				Toast.makeText(MainActivity.this,
-						"¿ªÊ¼²¥·Å:" + itemMusic.getMusicName(), Toast.LENGTH_SHORT)
+						"å¼€å§‹æ’­æ”¾:" + itemMusic.getMusicName(), Toast.LENGTH_SHORT)
 						.show();
 			}
 		});
-		// ´¦ÀíÓÃ»§³¤°´ÊÂ¼ş
+		// å¤„ç†ç”¨æˆ·é•¿æŒ‰äº‹ä»¶
 		gv.setOnItemLongClickListener(new OnItemLongClickListener() {
 
 			@Override
 			public boolean onItemLongClick(AdapterView<?> listView, View item,
 					int position, long id) {
 				Music itemMusic = musiclist.get(position);
-				// positionµÄÖµÊÇ´Ó0¿ªÊ¼
+				// positionçš„å€¼æ˜¯ä»0å¼€å§‹
 				Toast.makeText(MainActivity.this,
-						"ÒÑ¾­É¾³ı:" + itemMusic.getMusicName(), Toast.LENGTH_SHORT)
+						"å·²ç»åˆ é™¤:" + itemMusic.getMusicName(), Toast.LENGTH_SHORT)
 						.show();
-				// É¾³ı±»°´ÏÂµÄÊı¾İ
+				// åˆ é™¤è¢«æŒ‰ä¸‹çš„æ•°æ®
 				musiclist.remove(position);
-				// Í¨ÖªAdapterµÄ¹Û²ìÕßÊı¾İÔ´¸Ä±äÁË£¬½çÃæÄÚÈİÒ²µÃ·¢Éú±ä»¯
+				// é€šçŸ¥Adapterçš„è§‚å¯Ÿè€…æ•°æ®æºæ”¹å˜äº†ï¼Œç•Œé¢å†…å®¹ä¹Ÿå¾—å‘ç”Ÿå˜åŒ–
 				adapter.notifyDataSetChanged();
-				// ·µ»Øtrue ±íÊ¾²»ÔÙ»Øµ÷µ¥»÷ÊÂ¼ş falseÔÚÖ´ĞĞÍê³¤°´ÊÂ¼şºó»¹»á»Øµ÷µ¥»÷ÊÂ¼ş
+				// è¿”å›true è¡¨ç¤ºä¸å†å›è°ƒå•å‡»äº‹ä»¶ falseåœ¨æ‰§è¡Œå®Œé•¿æŒ‰äº‹ä»¶åè¿˜ä¼šå›è°ƒå•å‡»äº‹ä»¶
 				return true;
 			}
 		});
