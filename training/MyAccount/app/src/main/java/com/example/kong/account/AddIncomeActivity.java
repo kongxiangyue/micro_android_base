@@ -1,8 +1,10 @@
 package com.example.kong.account;
 
+import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -52,11 +54,11 @@ public class AddIncomeActivity extends AppCompatActivity {
             }
             break;
             case R.id.btnCancel : {
-
+                handleCancel();
             }
             break;
             case R.id.edTime    : {
-
+                handleTime();
             }
             break;
             default:
@@ -64,10 +66,38 @@ public class AddIncomeActivity extends AppCompatActivity {
         }
     }
 
+    private void handleTime() {
+
+        Calendar c = Calendar.getInstance();//可以对每个时间域单独修改
+        int year   = c.get(Calendar.YEAR);
+        int month  = c.get(Calendar.MONTH);
+        int date   = c.get(Calendar.DATE);
+        DatePickerDialog dialog = new DatePickerDialog(this
+                , new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view
+                    , int year, int month, int dayOfMonth) {
+                edTime.setText(year + "-" + (1 + month) + "-" + dayOfMonth);
+            }
+        }, year, month, date);
+
+        dialog.show();
+
+
+
+
+    }
+
+    private void handleCancel() {
+        init();
+    }
 
     private void handleSave() {
         Income income = new Income();
         income.setMoney(Double.valueOf(edMoney.getText().toString()));
+        income.setType(spinner.getSelectedItem().toString());
+        income.setMark(edRemark.getText().toString());
+        income.setTime(edTime.getText().toString());
 
     }
 
