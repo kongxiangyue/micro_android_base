@@ -24,33 +24,33 @@ public class MainActivity extends Activity {
 		final ArrayAdapter<String> adapter;
 		lv = (ListView) findViewById(R.id.lv);
 		for (int i = 1; i <= 50; i++) {
-			dataList.add("ListView²âÊÔÊı¾İ£¬µÚ" + i + "Ïî");
+			dataList.add("ListViewæµ‹è¯•æ•°æ®ï¼Œç¬¬" + i + "é¡¹");
 		}
-		// ¶¨ÒåÒ»¸öArrayAdapter£¬½«dataList×÷ÎªÊı¾İÔ´ ÇÒÊ¹ÓÃitem.xml×÷ÎªItemµÄ²¼¾Ö
+		// å®šä¹‰ä¸€ä¸ªArrayAdapterï¼Œå°†dataListä½œä¸ºæ•°æ®æº ä¸”ä½¿ç”¨item.xmlä½œä¸ºItemçš„å¸ƒå±€
 		adapter = new ArrayAdapter<String>(MainActivity.this, R.layout.item,
 				dataList);
 		lv.setAdapter(adapter);
-		// ´¦ÀíÓÃ»§µ¥»÷ÊÂ¼ş
+		// å¤„ç†ç”¨æˆ·å•å‡»äº‹ä»¶
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> listView, View item,
 					int position, long id) {
-				// positionµÄÖµÊÇ´Ó0¿ªÊ¼
+				// positionçš„å€¼æ˜¯ä»0å¼€å§‹
 				Toast.makeText(MainActivity.this,
-						"item" + (position + 1) + "±»µã»÷", Toast.LENGTH_SHORT)
+						"item" + (position + 1) + "è¢«ç‚¹å‡»", Toast.LENGTH_SHORT)
 						.show();
 			}
 		});
-		// ´¦ÀíÓÃ»§³¤°´ÊÂ¼ş
+		// å¤„ç†ç”¨æˆ·é•¿æŒ‰äº‹ä»¶
 		lv.setOnItemLongClickListener(new OnItemLongClickListener() {
 			@Override
 			public boolean onItemLongClick(AdapterView<?> listView, View item,
 					int position, long id) {
-				// É¾³ı±»°´ÏÂµÄÊı¾İ
+				// åˆ é™¤è¢«æŒ‰ä¸‹çš„æ•°æ®
 				dataList.remove(position);
-				// Í¨ÖªAdapterµÄ¹Û²ìÕßÊı¾İÔ´¸Ä±äÁË£¬½çÃæÄÚÈİÒ²µÃ·¢Éú±ä»¯
+				// é€šçŸ¥Adapterçš„è§‚å¯Ÿè€…æ•°æ®æºæ”¹å˜äº†ï¼Œç•Œé¢å†…å®¹ä¹Ÿå¾—å‘ç”Ÿå˜åŒ–
 				adapter.notifyDataSetChanged();
-				// ·µ»Øtrue ±íÊ¾²»ÔÙ»Øµ÷µ¥»÷ÊÂ¼ş falseÔÚÖ´ĞĞÍê³¤°´ÊÂ¼şºó»¹»á»Øµ÷µ¥»÷ÊÂ¼ş
+				// è¿”å›true è¡¨ç¤ºä¸å†å›è°ƒå•å‡»äº‹ä»¶ falseåœ¨æ‰§è¡Œå®Œé•¿æŒ‰äº‹ä»¶åè¿˜ä¼šå›è°ƒå•å‡»äº‹ä»¶
 				return true;
 			}
 		});

@@ -12,29 +12,29 @@ public class MusicAdapter extends BaseAdapter {
 	LayoutInflater inflater;
 	/**
 	 * @param context
-	 *            ÉÏÏÂÎÄ¶ÔÏó
+	 *            ä¸Šä¸‹æ–‡å¯¹è±¡
 	 * @param musiclist
-	 *            ÒôÀÖÁĞ±í
+	 *            éŸ³ä¹åˆ—è¡¨
 	 */
 	public MusicAdapter(Context context, ArrayList<Music> musiclist) {
 		this.inflater = LayoutInflater.from(context);
 		this.musiclist = musiclist;
 	}
-	// ¸Ã·½·¨µÄ·µ»ØÖµ¾ö¶¨ListViewµÄÌõÊı Ò²ÒâÎ¶×Å¾ö¶¨×ÅgetView·½·¨µÄ»Øµ÷´ÎÊı
+	// è¯¥æ–¹æ³•çš„è¿”å›å€¼å†³å®šListViewçš„æ¡æ•° ä¹Ÿæ„å‘³ç€å†³å®šç€getViewæ–¹æ³•çš„å›è°ƒæ¬¡æ•°
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
 		return musiclist.size();
 	}
-	// Ò»°ãÓÃ²»µ½ µ«ÊÇ´Ë´¦×îºÃ¸øÓèÕıÈ·µÄ·µ»ØÖµ ·ñÔòÔÚ listview.getItemAtPosition(position)
-	// ÒÔ¼°adapter.getItem(position)µÄÊ±ºò½«ÎŞ·¨µÃµ½¶ÔÏó
+	// ä¸€èˆ¬ç”¨ä¸åˆ° ä½†æ˜¯æ­¤å¤„æœ€å¥½ç»™äºˆæ­£ç¡®çš„è¿”å›å€¼ å¦åˆ™åœ¨ listview.getItemAtPosition(position)
+	// ä»¥åŠadapter.getItem(position)çš„æ—¶å€™å°†æ— æ³•å¾—åˆ°å¯¹è±¡
 	@Override
 	public Object getItem(int position) {
 		// TODO Auto-generated method stub
 		return musiclist.get(position);
 	}
-	// Ò»°ãÓÃ²»µ½ µ«ÊÇ´Ë´¦×îºÃ¸øÓèÕıÈ·µÄ·µ»ØÖµ ·ñÔòÔÚ listview.getItemIdAtPosition(position)
-	// ÒÔ¼°adapter.getItemId(position)µÄÊ±ºò½«ÎŞ·¨µÃµ½²ÎÊı
+	// ä¸€èˆ¬ç”¨ä¸åˆ° ä½†æ˜¯æ­¤å¤„æœ€å¥½ç»™äºˆæ­£ç¡®çš„è¿”å›å€¼ å¦åˆ™åœ¨ listview.getItemIdAtPosition(position)
+	// ä»¥åŠadapter.getItemId(position)çš„æ—¶å€™å°†æ— æ³•å¾—åˆ°å‚æ•°
 	@Override
 	public long getItemId(int position) {
 		// TODO Auto-generated method stub
@@ -42,11 +42,11 @@ public class MusicAdapter extends BaseAdapter {
 	}
 	@Override
 	/*
-	 * int position ¶ÔÓ¦µÄË÷ÒıÎ»ÖÃ ´Ó0¿ªÊ¼ View convertView ¶ÔÓ¦µÄÒ»Ìõitem¶ÔÏó ViewGroup parent
-	 * itemµÄ¸¸ÈİÆ÷¼´ListView return convertView ·µ»ØÖµ ±íÊ¾Ò»Ìõitem¶ÔÏó
+	 * int position å¯¹åº”çš„ç´¢å¼•ä½ç½® ä»0å¼€å§‹ View convertView å¯¹åº”çš„ä¸€æ¡itemå¯¹è±¡ ViewGroup parent
+	 * itemçš„çˆ¶å®¹å™¨å³ListView return convertView è¿”å›å€¼ è¡¨ç¤ºä¸€æ¡itemå¯¹è±¡
 	 */
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// ¼ÓÔØÌî³äÒ»¸ö²¼¾ÖÎÄ¼ş
+		// åŠ è½½å¡«å……ä¸€ä¸ªå¸ƒå±€æ–‡ä»¶
 		convertView = inflater.inflate(R.layout.item, null);
 		ImageView img = (ImageView) convertView.findViewById(R.id.img);
 		TextView musicName = (TextView) convertView

@@ -20,13 +20,19 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        String sql = String.format("create table if not exists "
+                        + "%s "
+                        + "(id integer primary key,"
+                        + "count varchar,"
+                        + "type varchar,"
+                        + "date varchar,"
+                        + "describe varchar)"
+                , TABLE_NAME);
+
         // 执行创建表，它在DBManager实例化的时候被调用
-        db.execSQL("create table " + "if not exists " + TABLE_NAME + " ("
-                + "id integer primary key,"
-                + "count varchar,"
-                + "type varchar,"
-                + "date varchar,"
-                + "describe varchar)");
+        db.execSQL(sql);
+
+
     }
 
     @Override
